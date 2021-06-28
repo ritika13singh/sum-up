@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SUM-IT</title>
+<link rel ="stylesheet" href ="./style/summarizer.css">
+<link rel ="stylesheet" href ="./style/style.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script
+    src="http://code.jquery.com/jquery-3.2.1.js">
+</script> 
+</head>
+<body>
+    <div id='nav'>
+        <!--top nav bar -->
+        <nav class ="nav">
+        <img src="./images/logo.jpeg" id="logo" width="60" height="60"/>
+        <a class ="toggle-nav" href ="#"> ☰ </a>
+            <div class ="nav-mobile">
+                <ul>
+                    <li><a href ="#"><i class ="fa fa-home"></i> HOME</a></li>
+                    <!-- <li><a href ="#"><i class ="fa fa-user"></i> LOGIN</a></li> -->
+                    <!-- <li><a href ="#"><i class ="fa fa-sign-in"></i> SIGNUP</a></li> -->
+                    <li><a href ="#"><i class ="fa fa-info"></i> ABOUT US</a></li>
+                    <!-- <li><a href ="#"><i class ="fa fa-envelope"></i> CONTACT US</a></li> -->
+                    <li><a href ="#"><i class ="fa fa-user"></i> YOUR SUMMARIES</a></li>
+                </ul>
+            </div>
+        </nav>
+        </div>
+        <!-- paragraph summary heading-->
+        
+        <div class="topflex">
+            <div>Paragraph</div>
+            <div>Summary</div>
+        </div>
+        <!--paragraph summary boxes-->
+       
+        <form action = "http://localhost:5000/summarizer" method = "POST" enctype = "multipart/form-data">
+            <input type = "file" name = "file" />
+            <input type = "submit"/>
+        </form>
+        <div class="flex-container">
+            <!--this text area contains paragraph-->
+            <textarea id="content-target"></textarea>
+            <!--this text area should contain the summary-->
+            <textarea id="content-target"></textarea>
+        </div>
+        
+        <!--abhishek's code for nav bar-->
+        <script>
+            $(document).ready(function(){
+                $('.nav .toggle-nav').click(function(e){
+                    $('.nav .nav-mobile').slideToggle('slow');
+                    e.preventDefault();
+                })
+            })
+        </script>
+        <!--till here-->
+        
+        <!--drag and drop section-->
+        <!-- add code here for drag and drop-->
+        
+        <!--read the content of file-->
+        <!--https://www.javascripture.com/FileReader-->
+        
+        
+</body>
+</html>
