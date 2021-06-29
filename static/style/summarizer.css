@@ -1,0 +1,35 @@
+.topflex
+{
+    background-color: white;
+    display: flex;
+}
+.topflex > div
+{
+    margin:1px;
+    width: 1500px;
+    background-color:#e4e4e4 ;
+    text-align: center;
+    flex-flow: column;
+    line-height: normal;
+    font-size:20px;
+    margin-top: 10px;
+}
+.flex-container 
+{
+    background-color: #e4e4e4;
+    display: flex;
+}  
+.flex-container > textarea 
+{
+    background-color:#ffffff;
+    color: black;
+    margin: 7px;
+    width: 1500px;
+    height: 1000px;
+    text-align:start;
+    line-height:28px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    font-stretch:ultra-expanded;
+}
