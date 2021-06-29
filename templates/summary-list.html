@@ -3,14 +3,14 @@
 
 <head>
     <title> {{user}} </title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="static/style/style.css">
 </head>
 
 <body>
     <div id='nav'>
         <!--top nav bar -->
         <nav class="nav">
-            <img src="images/logo.jpeg" id="logo" width="60" height="60" />
+            <img src="static/images/logo.jpeg" id="logo" width="60" height="60" />
             <a class="toggle-nav" href="#"> ☰ </a>
             <div class="nav-mobile">
                 <ul>
@@ -33,7 +33,7 @@
     <section>
 
         <div class="summary-container">
-            <img src="images/add.svg" alt="add new summary" draggable="false">
+            <img src="static/images/add.svg" alt="add new summary" draggable="false">
         </div>
         {% for summary_id, summary, heading in summary_list %}
         <div class="summary-container">
