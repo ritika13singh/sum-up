@@ -2,19 +2,19 @@
 <html>
 
 <head>
-    <title> {User} </title>
-    <link rel="stylesheet" href="style.css">
+    <title> {{user}} </title>
+    <link rel="stylesheet" href="static/style/style.css">
 </head>
 
 <body>
     <div id='nav'>
         <!--top nav bar -->
         <nav class="nav">
-            <img src="logo.jpeg" id="logo" width="60" height="60" />
+            <img src="static/images/logo.jpeg" id="logo" width="60" height="60" />
             <a class="toggle-nav" href="#"> ☰ </a>
             <div class="nav-mobile">
                 <ul>
-                    <li><a href="#"><i class="fa fa-user"></i> LOGOUT</a></li>                   
+                    <li><a href="/logout"><i class="fa fa-user"></i> LOGOUT</a></li>                   
                     <!-- <li><a href="#"><i class="fa fa-sign-in"></i> SIGNUP</a></li> -->
                     <li><a href="#"><i class="fa fa-info"></i> ABOUT US</a></li>
                     <!-- <li><a href="#"><i class="fa fa-envelope"></i> CONTACT US</a></li> -->
@@ -33,156 +33,22 @@
     <section>
 
         <div class="summary-container">
-            <img src="add.svg" alt="add new summary" draggable="false">
+            <img src="static/images/add.svg" alt="add new summary" draggable="false">
         </div>
+        {% for summary_id, summary, heading in summary_list %}
         <div class="summary-container">
             <a href="https://www.google.com">
                 <div class="textbox">
                     <div class="texthead">
-                        Johannes Gutenberg
+                        {{ heading }} 
                     </div>
                     <div class="textbody">
-                        he German Johannes Gutenberg introduced printing in Europe. His invention had a decisive
-                        contribution in spread of mass-learning and in building the basis of the modern society.
-
-                        Gutenberg major invention was a practical system permitting the mass production of printed
-                        books. The printed books allowed open circulation of information, and prepared the evolution of
-                        society from to the contemporary knowledge-based economy.
+                        {{ summary }}
                     </div>
                 </div>
             </a>
         </div>
-        <div class="summary-container">
-            <a href="https://www.google.com">
-                <div class="textbox">
-                    <div class="texthead">
-                        “Alice in the Wonderland”
-                    </div>
-                    <div class="textbody">
-                        “Alice’s Adventures in the Wonderland” is a very popular book for children that adults can also
-                        enjoy reading. The author is Charles Dodson, an English writer who published the book in 1865
-                        under the pseudonym of Lewis Carroll.
-
-                        Through its fantasy story and main theme: “a growing girl exploring the wonders of world“, the
-                        book has been very influential over the years, both in popular culture and in literature. The
-                        book is an enigmatic work, and over the years, readers have been puzzled by the language and the
-                        logic of Wonderland.
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="summary-container">
-            <a href="https://www.google.com">
-                <div class="textbox">
-                    <div class="texthead">
-                        William Shakespeare’s play “Romeo and Juliet”
-
-                    </div>
-                    <div class="textbody">
-                        Shakespeare’s play Romeo and Juliet is the world most famous romantic tragedy. In this play, a
-                        long lasting dispute between the Montague and Capulet families from the city of Verona causes
-                        the death of (Montague) Romeo and of Juliet (a Capulet).
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="summary-container">
-            <a href="https://www.google.com">
-                <div class="textbox">
-                    <div class="texthead">
-                        Speakeasy video
-                    </div>
-                    <div class="textbody">
-                        The Speakeasy series’ first video is illustrating a very simple truth: if someone cannot
-                        communicate effectively, then the person won’t be able to present their own ideas or knowledge
-                        to an audience.
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="summary-container">
-            <a href="https://www.google.com">
-                <div class="textbox">
-                    <div class="texthead">
-                        Just Say No to Uniforms
-                    </div>
-                    <div class="textbody">
-                        The author of this article believes that schools should not require school uniforms for a number
-                        of reasons. First, wearing school uniforms takes away a child's chance to express their
-                        personality through their choice of clothing. I think this is particularly important when you
-                        are in middle school and you are trying to make a statement about yourself through the t-shirts,
-                        jeans, and jackets that you select. Second, students won't have a chance to practice picking out
-                        their own outfits, something that they would have to do everyday before they go to work.
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="summary-container">
-            <a href="https://www.google.com">
-                <div class="textbox">
-                    <div class="texthead">
-                        "Miss Brill" by Katherine Mansfield
-                    </div>
-                    <div class="textbody">
-                        "Miss Brill is the story of an old woman told brilliantly and realistically, balancing thoughts
-                        and emotions that sustain her late solitary life amidst all the buste of modem ife. Miss Brill
-                        is a regular visitor on Sundays to the Jardins Publiques (the Public Gardens) of a small French
-                        suburb where she sits and watches all sorts of people come and go. She listens to the band
-                        playing, loves to watch people and guess what keeps them going and enjoys contemplating the
-                        world as a great stage upon which actors perform. She finds herself to be another actor among
-                        the so many she sees, or at least herself as part of the performance after all
-
-                        "One Sunday Miss Brill puts on her fur and goes to the Public Gardens as usual. The evening ends
-                        with her sudden realization that she is old and lonely, a realization brought to her by a
-                        conversation she overhears between a boy and a girl presumably lovers, who comment on her
-                        unwelcome presence in their vicinity. Miss dssed as she returns home, not stopping by as usual
-                        to buy her Sunday delicacy, a slice Brill is sad and e of honey-cake. She retires to her dark
-                        room, puts the fur back into the box and imagines that she has heard something cry
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="summary-container">
-            <a href="https://www.google.com">
-                <div class="textbox">
-                    <div class="texthead">
-                        Penguins
-                    </div>
-                    <div class="textbody">
-                        The birth process of penguins is fascinating and quite different from that of other animals. The female penguin lays an egg. However, the female penguin leaves soon after laying the egg and spends the winter in the sea. Meanwhile the male must take care of the egg. For two months, he places the egg on his feet under his belly. During this time, the male penguin doesn't eat. Even after the baby penguin hatches, the male penguin continues to take care of the infant penguin.
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="summary-container">
-            <a href="https://www.google.com">
-                <div class="textbox">
-                    <div class="texthead">
-                        Proof of Heaven by Dr. Eben Alexander
-
-                    </div>
-                    <div class="textbody">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="summary-container">
-            <a href="https://www.google.com">
-                <div class="textbox">
-                    <div class="texthead">
-                        Stiglitz
-                    </div>
-                    <div class="textbody">
-                        Stiglitz (2013) suggests that creating wealth adds value to society, but that taking away the wealth of others detracts from it. He uses the example of a monopolist who overcharges for his product resulting in loss of wealth for the customer, but also loss of value as the monopolist has to restrict production in order to charge the higher price.
-                    </div>
-                </div>
-            </a>
-        </div>
+        {% endfor %}
 
 
     </section>
