@@ -69,6 +69,10 @@ def home():
     return render_template('summary-list.html', \
             user=username, summary_list=summary_list)
 
+@app.route('/create')
+def create():
+     return render_template('summarizer.html')
+
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
@@ -81,7 +85,7 @@ def register():
 
         if request.form.get('psw-repeat') != request.form.get('psw'):
             flash ("Passwords didn't matched, please try again", 'error')
-            return render_templates('register.html')
+            return render_template('register.html')
 
         password_hash = generate_password_hash(request.form.get('psw'))
         storage.add_user(request.form.get('email'), 

@@ -3,22 +3,23 @@
 
 <head>
     <title> {{user}} </title>
-    <link rel="stylesheet" href="static/style/style.css">
+    <link rel="stylesheet" href="../static/style/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
     <div id='nav'>
         <!--top nav bar -->
         <nav class="nav">
-            <img src="static/images/logo.jpeg" id="logo" width="60" height="60" />
+            <img src="../static/images/logo.jpeg" id="logo" width="60" height="60" />
             <a class="toggle-nav" href="#"> ☰ </a>
             <div class="nav-mobile">
                 <ul>
                     <li><a href="/logout"><i class="fa fa-user"></i> LOGOUT</a></li>                   
                     <!-- <li><a href="#"><i class="fa fa-sign-in"></i> SIGNUP</a></li> -->
-                    <li><a href="#"><i class="fa fa-info"></i> ABOUT US</a></li>
+                    <!-- <li><a href="/about.html"><i class="fa fa-info"></i> ABOUT US</a></li> -->
                     <!-- <li><a href="#"><i class="fa fa-envelope"></i> CONTACT US</a></li> -->
-                    <li><a href="#"><i class="fa fa-home"></i> HOME</a></li>
+                    <li><a href="/create"><i class="fa fa-plus-circle"></i> CREATE SUMMARY</a></li>
                     <!-- <li><a href="#"><i class="fa fa-user"></i> ACCOUNTS</a></li> -->
                     
                 </ul>
@@ -32,9 +33,11 @@
     </div>
     <section>
 
-        <div class="summary-container">
-            <img src="static/images/add.svg" alt="add new summary" draggable="false">
-        </div>
+        <!-- <div class="summary-container">
+            <a href="/summarizer">
+                <img src="../static/images/add.svg" alt="add new summary" draggable="false" id="addSummary">
+            </a>   
+        </div> -->
         {% for summary_id, summary, heading in summary_list %}
         <div class="summary-container">
             <a href="https://www.google.com">
