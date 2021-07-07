@@ -278,3 +278,23 @@ li{
         display:block !important;
     }
 }
+
+i.notification {
+    animation: cssAnimation 0s ease-in-out 3s forwards;
+    animation-delay: 2s;
+    border: 1px black;
+    position: absolute;
+    z-index: 100;
+    background-color: rgba(204,0,0,0.7);
+    left: 33%;
+    padding: 8px;
+}
+
+@keyframes cssAnimation {
+    from { 
+        opacity: 1
+    }
+    to {
+        opacity: 0;
+    }
+}

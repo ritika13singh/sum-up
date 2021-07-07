@@ -15,6 +15,10 @@
                 SUM - IT
             </h2>
         </div>
+        {% if loginFailed %}
+        <div class="notification">Username doesn't exist, please try again or create an account</div>
+        {% else %}
+        {% endif %}
         <div >
 
             <form class="modal-content " action="/" method="post">
