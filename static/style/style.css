@@ -279,7 +279,7 @@ li{
     }
 }
 
-i.notification {
+.notification {
     animation: cssAnimation 0s ease-in-out 3s forwards;
     animation-delay: 2s;
     border: 1px black;
