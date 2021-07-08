@@ -37,13 +37,13 @@ def login():
         username = request.form.get('uname')
         if not storage.does_user_exist(username):
             flash ("Incorrect login credentials, please try again")
-            return render_template('login.html')
+            return render_template('login.html', loginFailed="true")
         (user_id, user_email, user_password) =  \
         storage.get_user_details(username)
         
         if not check_password_hash (user_password, request.form.get('psw')):
             flash ("Incorrect login credentials, please try again")
-            return render_template('login.html')
+            return render_template('login.html', loginFailed="true")
       
         session['username'] = username
         session.permanent = True if request.form.get('remember') \
@@ -69,10 +69,6 @@ def home():
     return render_template('summary-list.html', \
             user=username, summary_list=summary_list)
 
-@app.route('/create')
-def create():
-     return render_template('summarizer.html')
-
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
@@ -85,13 +81,13 @@ def register():
 
         if request.form.get('psw-repeat') != request.form.get('psw'):
             flash ("Passwords didn't matched, please try again", 'error')
-            return render_template('register.html')
+            return render_templates('register.html')
 
         password_hash = generate_password_hash(request.form.get('psw'))
         storage.add_user(request.form.get('email'), 
                          request.form.get('email'),
                          password_hash)
-        flash ("Registeration Succesful!")
+        flash ("Registration Succesful!")
         return render_template('login.html')
 
 if __name__ == '__main__':
